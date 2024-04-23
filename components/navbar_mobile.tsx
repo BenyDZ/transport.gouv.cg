@@ -43,7 +43,7 @@ const Navbar_mobile = () => {
               className="max-sm:size-30"
             />
 
-            <p className="font-extrabold">AfricanWhiz-Tech</p>
+            <p className="font-extrabold">MTACMM</p>
           </Link>
 
           <div className="flex h-[calc1(100vh-72px)] flex-col justify-between overflow-y-auto">
