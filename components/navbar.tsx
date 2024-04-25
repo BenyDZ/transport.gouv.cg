@@ -33,7 +33,7 @@ const Navbar = () => {
           : "w-full pt-3 px-10 lg:px-32"
       }
     >
-      <div className="flex flex-row justify-between border-b-2 pb-1 border-primary w-full">
+      <div className="flex flex-row justify-between border-b-2 pb-1 border-green-400 w-full">
         <Link href="/" className="flex items-center gap-1">
           <Image
             src="/Images/logo.png"
@@ -45,21 +45,24 @@ const Navbar = () => {
         </Link>
         <div className="flex flex-row items-center">
           <div className="flex flex-row gap-2 md:gap-0.5 w-full">
-            {sidebarLinks.map((link) => {
+            {sidebarLinks.map((link, index) => {
               const isAcive =
                 pathname === link.route ||
                 pathname.startsWith("${link.route}/");
 
               if (link == sidebarLinks[1]) {
                 return (
-                  <div className="p-3 whitespace-nowrap hidden md:block group cursor-pointer">
+                  <div
+                    className="p-3 whitespace-nowrap hidden md:block group cursor-pointer"
+                    key={index}
+                  >
                     <Link
                       href=""
                       className={cn("", {
-                        "text-primary": isAcive,
+                        "text-green-400": isAcive,
                       })}
                     >
-                      <p className="text-sm font-normal hidden md:block md:text-xs hover:text-primary ">
+                      <p className="text-sm font-normal hidden md:block md:text-xs hover:text-green-500 ">
                         {link.label}
                       </p>
                     </Link>
@@ -70,14 +73,14 @@ const Navbar = () => {
                           pathname === mLink.route ||
                           pathname.startsWith("${link.route}/");
                         return (
-                          <div>
+                          <div key={index}>
                             <Link
                               href={mLink.route}
                               key={mLink.label}
                               className={cn(
-                                "whitespace-nowrap hidden md:block group hover:text-primary",
+                                "whitespace-nowrap hidden md:block group hover:text-green-500",
                                 {
-                                  "text-primary": isAcive,
+                                  "text-green-400": isAcive,
                                 }
                               )}
                             >
@@ -97,9 +100,9 @@ const Navbar = () => {
                     href={link.route}
                     key={link.label}
                     className={cn(
-                      "p-3 hover:text-primary whitespace-nowrap hidden md:block",
+                      "p-3 hover:text-green-500 whitespace-nowrap hidden md:block",
                       {
-                        "text-primary": isAcive,
+                        "text-green-400": isAcive,
                       }
                     )}
                   >

@@ -66,3 +66,24 @@ export const cardImages = [
     link: "#!",
   },
 ];
+
+export const sideInfo = [
+  {
+    label:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupt minus velit modi ad? Accusamus harum, atque commodi eaque repudiandae consequuntur quibusdam dicta, tempore sint vel eos asperiores adipisci in ",
+    date: "02 Fevrier 2024",
+    link: "#!",
+  },
+  {
+    label:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupt minus velit modi ad? Accusamus harum, atque commodi eaque repudiandae consequuntur quibusdam dicta, tempore sint vel eos asperiores adipisci in ",
+    date: "03 Fevrier 2024",
+    link: "#!",
+  },
+  {
+    label:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupt minus velit modi ad? Accusamus harum, atque commodi eaque repudiandae consequuntur quibusdam dicta, tempore sint vel eos asperiores adipisci in ",
+    date: "04 Fevrier 2024",
+    link: "#!",
+  },
+];

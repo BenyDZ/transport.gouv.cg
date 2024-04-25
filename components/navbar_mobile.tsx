@@ -50,21 +50,21 @@ const Navbar_mobile = () => {
             {/* all links inside will automaticaly close the menu after click */}
             <SheetClose asChild>
               <section className="flex h-full flex-col gap-5 pt-26">
-                {sidebarLinks.map((link) => {
+                {sidebarLinks.map((link, index) => {
                   const isAcive =
                     pathname === link.route ||
                     pathname.startsWith("${link.route}/");
 
                   if (link == sidebarLinks[1]) {
                     return (
-                      <Collapsible className="w-full">
+                      <Collapsible className="w-full" key={index}>
                         <CollapsibleTrigger className="w-full" asChild>
                           <Link
                             href=""
                             key={link.label}
                             className={cn(
-                              "flex gap-4 items-center p-4 w-full max-w-60 hover:text-primary border-b-2 border-silver rounded-none",
-                              { "text-primary": isAcive }
+                              "flex gap-4 items-center p-4 w-full max-w-60 hover:text-green-500 border-b-2 border-silver rounded-none",
+                              { "text-green-400": isAcive }
                             )}
                           >
                             <p className="font-semibold">{link.label}</p>
@@ -76,14 +76,17 @@ const Navbar_mobile = () => {
                               pathname === mLink.route ||
                               pathname.startsWith("${link.route}/");
                             return (
-                              <div className="flex flex-col gap-1 py-2 ml-6 ">
+                              <div
+                                className="flex flex-col gap-1 py-2 ml-6 "
+                                key={index}
+                              >
                                 <Link
                                   href={mLink.route}
                                   key={mLink.label}
                                   className={cn(
-                                    "whitespace-nowrap group hover:text-primary",
+                                    "whitespace-nowrap group hover:text-green-500",
                                     {
-                                      "text-primary": isAcive,
+                                      "text-green-400": isAcive,
                                     }
                                   )}
                                 >
@@ -105,8 +108,8 @@ const Navbar_mobile = () => {
                           href={link.route}
                           key={link.label}
                           className={cn(
-                            "flex gap-4 items-center p-4 w-full max-w-60 hover:text-primary border-b-2 border-silver rounded-none",
-                            { "text-primary": isAcive }
+                            "flex gap-4 items-center p-4 w-full max-w-60 hover:text-green-500 border-b-2 border-silver rounded-none",
+                            { "text-green-400": isAcive }
                           )}
                         >
                           <p className="font-semibold">{link.label}</p>

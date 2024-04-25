@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect } from "react";
 
 const Caroussel = () => {
@@ -33,6 +34,7 @@ const Caroussel = () => {
                 className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
                 aria-current="true"
                 aria-label="Slide 1"
+                key={index}
               ></button>
             );
           } else {
@@ -43,6 +45,7 @@ const Caroussel = () => {
                 data-twe-slide-to={index}
                 className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
                 aria-label="Slide 2"
+                key={index}
               ></button>
             );
           }
@@ -58,11 +61,13 @@ const Caroussel = () => {
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <img
-            src="/I
-            mages/hero1.png"
-            className="block w-full h-[90vh]"
+          <Image
+            src="/Images/hero1.png"
+            className="block w-full md:h-[90vh] h-auto"
             alt="hero view image"
+            width={0}
+            height={0}
+            sizes="100vw"
           />
           <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
             <h5 className="text-xl">First slide label</h5>
@@ -75,10 +80,13 @@ const Caroussel = () => {
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <img
+          <Image
             src="/Images/hero2.png"
-            className="block w-full h-[90vh]"
+            className="block w-full md:h-[90vh] h-auto"
             alt="hero view image"
+            width={0}
+            height={0}
+            sizes="100vw"
           />
           <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
             <h5 className="text-xl">Second slide label</h5>
@@ -91,10 +99,13 @@ const Caroussel = () => {
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <img
+          <Image
             src="/Images/hero3.png"
-            className="block w-full h-[90vh]"
+            className="block w-full md:h-[90vh] h-auto"
             alt="hero view image"
+            width={0}
+            height={0}
+            sizes="100vw"
           />
           <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
             <h5 className="text-xl">Third slide label</h5>
@@ -107,25 +118,16 @@ const Caroussel = () => {
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <img
+          <Image
             src="/Images/hero4.png"
-            className="block w-full h-[90vh]"
+            className="block w-full md:h-[90vh] h-auto"
             alt="hero view image"
+            width={0}
+            height={0}
+            sizes="100vw"
           />
           <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
             <h5 className="text-xl">Third slide label</h5>
-            <p>Some representative placeholder content for the third slide.</p>
-          </div>
-        </div>
-        {/* <!--Fourth item--> */}
-        <div
-          className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-          data-twe-carousel-item
-          style={{ backfaceVisibility: "hidden" }}
-        >
-          <div className="block w-full h-[90vh] bg-[url('/Images/hero4.png')] bg-cover bg-no-repeat"></div>
-          <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-            <h5 className="text-xl">Fourth slide label</h5>
             <p>Some representative placeholder content for the third slide.</p>
           </div>
         </div>
