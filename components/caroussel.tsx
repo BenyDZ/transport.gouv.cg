@@ -117,6 +117,18 @@ const Caroussel = () => {
             <p>Some representative placeholder content for the third slide.</p>
           </div>
         </div>
+        {/* <!--Fourth item--> */}
+        <div
+          className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          data-twe-carousel-item
+          style={{ backfaceVisibility: "hidden" }}
+        >
+          <div className="block w-full h-[90vh] bg-[url('/Images/hero4.png')] bg-cover bg-no-repeat"></div>
+          <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+            <h5 className="text-xl">Fourth slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
       </div>
 
       {/* <!--Carousel controls - prev item--> */}
