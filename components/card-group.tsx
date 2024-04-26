@@ -4,7 +4,7 @@ import { cardImages } from "@/constants";
 import Link from "next/link";
 import { useEffect } from "react";
 
-const CardGroup = () => {
+export default async function CardGroup() {
   useEffect(() => {
     const init = async () => {
       const { Card, initTWE } = await import("tw-elements");
@@ -13,7 +13,7 @@ const CardGroup = () => {
     init();
   }, []);
   return (
-    <div className="lg:w-[70%]">
+    <div className="lg:w-[75%]">
       <div className="flex flex-col gap-3 ">
         <div className="flex justify-between">
           <h2 className="font-bold">Actualité</h2>
@@ -59,6 +59,4 @@ const CardGroup = () => {
       </div>
     </div>
   );
-};
-
-export default CardGroup;
+}

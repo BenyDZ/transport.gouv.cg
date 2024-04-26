@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav
       className={
         header
-          ? "fixed top-0 left-0 z-50 shadow-md w-full pt-3 px-10 lg:px-32 bg-white/80"
-          : "w-full pt-3 px-10 lg:px-32"
+          ? "fixed top-0 left-0 z-50 shadow-md w-full pt-3 px-10 lg:px-20 bg-white/80"
+          : "w-full pt-3 px-10 lg:px-20"
       }
     >
       <div className="flex flex-row justify-between border-b-2 pb-1 border-green-400 w-full">
