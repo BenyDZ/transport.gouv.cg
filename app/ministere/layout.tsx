@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { ReactNode } from "react";
 
@@ -10,6 +11,7 @@ const MinistereLayout = ({ children }: { children: ReactNode }) => {
           <div className="w-full">{children}</div>
         </section>
       </div>
+      <Footer />
     </main>
   );
 };
