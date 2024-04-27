@@ -41,8 +41,8 @@ const SideInfo = () => {
           })}
         </div>
       </div>
-      <div>
-        <div className="flex flex-col gap-3 py-6">
+      <div className="mt-10">
+        <div className="flex flex-col gap-3 py-10">
           <div className="flex justify-between">
             <h2 className="font-bold">Revue de presse</h2>
             <h3 className="text-green-400 hover:text-green-500">
@@ -54,10 +54,10 @@ const SideInfo = () => {
             <hr className="border-secondary w-full" />
           </div>
         </div>
+        <Suspense fallback={<p>Loading video...</p>}>
+          <VideoComponent />
+        </Suspense>
       </div>
-      <Suspense fallback={<p>Loading video...</p>}>
-        <VideoComponent />
-      </Suspense>
     </div>
   );
 };

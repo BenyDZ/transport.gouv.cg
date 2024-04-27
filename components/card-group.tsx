@@ -4,7 +4,7 @@ import { cardImages } from "@/constants";
 import Link from "next/link";
 import { useEffect } from "react";
 
-export default async function CardGroup() {
+const CardGroup = () => {
   useEffect(() => {
     const init = async () => {
       const { Card, initTWE } = await import("tw-elements");
@@ -12,6 +12,7 @@ export default async function CardGroup() {
     };
     init();
   }, []);
+
   return (
     <div className="lg:w-[75%]">
       <div className="flex flex-col gap-3 ">
@@ -59,4 +60,6 @@ export default async function CardGroup() {
       </div>
     </div>
   );
-}
+};
+
+export default CardGroup;
