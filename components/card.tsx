@@ -1,25 +1,5 @@
-import { cardImages } from "@/constants";
-
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
-
-export default async function CardWrapper() {
-  return (
-    <div className="md:grid-cols-2 md:grid space-y-6 md:space-y-0 md:gap-6">
-      {cardImages.map((imag, index) => {
-        return (
-          <CardComponent
-            title={imag.title}
-            src={imag.src}
-            label={imag.label}
-            link={imag.link}
-            key={index}
-          />
-        );
-      })}
-    </div>
-  );
-}
 
 export function CardComponent({
   link,
@@ -33,7 +13,7 @@ export function CardComponent({
   title: string;
 }) {
   return (
-    <Card className="">
+    <Card className="rounded-t-lg">
       <CardHeader className="p-0 pb-6">
         <a href={link} className="relative h-full w-full rounded-t-lg">
           <Image
